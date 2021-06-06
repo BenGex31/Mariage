@@ -2,6 +2,8 @@
   margin-top: 100px;
 }
 
+/*AuthForm.js*/
+
 form {
   display: flex;
   flex-direction: column;
@@ -40,4 +42,14 @@ input {
 .button_google,
 .button_facebook {
   padding: 10px;
+}
+
+.connect {
+  background-color: #3f53d9;
+  color: #fff;
+}
+
+.message_required {
+  color: red;
+  font-weight: bold;
 }

@@ -46,7 +46,9 @@ export default function AuthForm() {
           placeholder="Adresse mail personnel"
           {...register("exampleRequired", { required: true })}
         />
-        {errors.exampleRequired && <span>This field is required</span>}
+        {errors.exampleRequired && (
+          <span className="message_required">This field is required</span>
+        )}
 
         {/* include validation with required or other standard HTML validation rules */}
         <input
@@ -57,9 +59,11 @@ export default function AuthForm() {
           {...register("exampleRequired", { required: true })}
         />
         {/* errors will return when field validation fails  */}
-        {errors.exampleRequired && <span>This field is required</span>}
+        {errors.exampleRequired && (
+          <span className="message_required">This field is required</span>
+        )}
 
-        <input type="submit" />
+        <input className="connect" type="submit" value="Se connecter" />
       </div>
     </form>
   );
