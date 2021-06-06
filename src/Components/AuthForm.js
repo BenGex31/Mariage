@@ -2,7 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 //import GoogleOutlined from "@ant-design/icons/GoogleOutlined";
 
-export default function App() {
+export default function AuthForm() {
   const {
     register,
     handleSubmit,
@@ -28,29 +28,30 @@ export default function App() {
           </button>
         </div>
         <div className="signIn_facebook">
-          <div className="button_facebook">
-            <button className="button_facebook">
-              <img
-                src="https://miro.com/static/images/signup/v2/f-icon.svg?cbh=8730bf0aa763e55adbdfb6fa54a86b28"
-                alt="Facebook"
-              />
-              <p>Se connecter avec facebook</p>
-            </button>
-          </div>
+          <button className="button_facebook">
+            <img
+              src="https://miro.com/static/images/signup/v2/f-icon.svg?cbh=8730bf0aa763e55adbdfb6fa54a86b28"
+              alt="Facebook"
+            />
+            <p>Se connecter avec facebook</p>
+          </button>
         </div>
       </div>
       <div className="signIn_personnal">
         {/* register your input into the hook by invoking the "register" function */}
         <input
           type="text"
+          name="email"
           className="inputAuth"
           placeholder="Adresse mail personnel"
-          {...register("example")}
+          {...register("exampleRequired", { required: true })}
         />
+        {errors.exampleRequired && <span>This field is required</span>}
 
         {/* include validation with required or other standard HTML validation rules */}
         <input
           type="text"
+          name="password"
           className="inputAuth"
           placeholder="Mot de passe"
           {...register("exampleRequired", { required: true })}
