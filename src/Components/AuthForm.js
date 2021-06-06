@@ -15,11 +15,20 @@ export default function App() {
   return (
     /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
     <form onSubmit={handleSubmit(onSubmit)}>
+      <h1>Connectez-vous</h1>
+      <div className="signup_social">
+        <button className="signup_google">
+          Se connecter avec Google
+        </button>
+        <button className="signup_facebook">
+          Se connecter avec facebook
+        </button>
+      </div>
       {/* register your input into the hook by invoking the "register" function */}
-      <input placeholder="Adresse mail" {...register("example")} />
+      <input className="inputAuth" placeholder="Adresse mail personnel" {...register("example")} />
 
       {/* include validation with required or other standard HTML validation rules */}
-      <input placeholder="Mot de passe" {...register("exampleRequired", { required: true })} />
+      <input className="inputAuth" placeholder="Mot de passe" {...register("exampleRequired", { required: true })} />
       {/* errors will return when field validation fails  */}
       {errors.exampleRequired && <span>This field is required</span>}
 
