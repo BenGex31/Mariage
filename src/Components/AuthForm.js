@@ -1,5 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+//import GoogleOutlined from "@ant-design/icons/GoogleOutlined";
 
 export default function App() {
   const {
@@ -18,9 +19,11 @@ export default function App() {
       <h1>Connectez-vous</h1>
       <div className="signup_social">
         <button className="signup_google">
+          <img src="https://miro.com/static/images/signup/v2/google-g-logo-3.svg?cbh=7b31665a03d5b1c8a3d3eea5418e7519" alt="Google"/>
           Se connecter avec Google
         </button>
         <button className="signup_facebook">
+          <img src="https://miro.com/static/images/signup/v2/f-icon.svg?cbh=8730bf0aa763e55adbdfb6fa54a86b28" alt="Facebook" />
           Se connecter avec facebook
         </button>
       </div>
