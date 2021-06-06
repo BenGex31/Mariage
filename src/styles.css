@@ -3,15 +3,24 @@ form {
   flex-direction: column;
   max-width: 500px;
   margin: 0 auto;
-  width: 400px;
+  width: 450px;
 }
 
 input {
-  margin-bottom: 15px
+  margin-bottom: 15px;
 }
 
 .signup_social {
   display: flex;
-  justify-content : space-between;
+  justify-content: space-between;
   margin-bottom: 20px;
+}
+
+.signup_social button {
+  font-size: 11px;
+}
+
+.signup_social img {
+  width: 20px;
+  height: 20px;
 }
