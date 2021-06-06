@@ -17,41 +17,49 @@ export default function App() {
     /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
     <form onSubmit={handleSubmit(onSubmit)}>
       <h1>Connectez-vous</h1>
-      <div className="signup_social">
-        <button className="signup_google">
-          <img
-            src="https://miro.com/static/images/signup/v2/google-g-logo-3.svg?cbh=7b31665a03d5b1c8a3d3eea5418e7519"
-            alt="Google"
-          />
-          Se connecter avec Google
-        </button>
-        <button className="signup_facebook">
-          <img
-            src="https://miro.com/static/images/signup/v2/f-icon.svg?cbh=8730bf0aa763e55adbdfb6fa54a86b28"
-            alt="Facebook"
-          />
-          Se connecter avec facebook
-        </button>
+      <div className="signIn_social">
+        <div className="signup_google">
+          <button className="button_google">
+            <img
+              src="https://miro.com/static/images/signup/v2/google-g-logo-3.svg?cbh=7b31665a03d5b1c8a3d3eea5418e7519"
+              alt="Google"
+            />
+            <p>Se connecter avec Google</p>
+          </button>
+        </div>
+        <div className="signIn_facebook">
+          <div className="button_facebook">
+            <button className="button_facebook">
+              <img
+                src="https://miro.com/static/images/signup/v2/f-icon.svg?cbh=8730bf0aa763e55adbdfb6fa54a86b28"
+                alt="Facebook"
+              />
+              <p>Se connecter avec facebook</p>
+            </button>
+          </div>
+        </div>
       </div>
-      {/* register your input into the hook by invoking the "register" function */}
-      <input
-        type="text"
-        className="inputAuth"
-        placeholder="Adresse mail personnel"
-        {...register("example")}
-      />
+      <div className="signIn_personnal">
+        {/* register your input into the hook by invoking the "register" function */}
+        <input
+          type="text"
+          className="inputAuth"
+          placeholder="Adresse mail personnel"
+          {...register("example")}
+        />
 
-      {/* include validation with required or other standard HTML validation rules */}
-      <input
-        type="text"
-        className="inputAuth"
-        placeholder="Mot de passe"
-        {...register("exampleRequired", { required: true })}
-      />
-      {/* errors will return when field validation fails  */}
-      {errors.exampleRequired && <span>This field is required</span>}
+        {/* include validation with required or other standard HTML validation rules */}
+        <input
+          type="text"
+          className="inputAuth"
+          placeholder="Mot de passe"
+          {...register("exampleRequired", { required: true })}
+        />
+        {/* errors will return when field validation fails  */}
+        {errors.exampleRequired && <span>This field is required</span>}
 
-      <input type="submit" />
+        <input type="submit" />
+      </div>
     </form>
   );
 }

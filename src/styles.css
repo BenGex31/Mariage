@@ -12,19 +12,32 @@ form {
 
 input {
   margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 4px;
 }
 
-.signup_social {
+.signIn_social {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
 }
 
-.signup_social button {
+.signIn_social button {
   font-size: 11px;
 }
 
-.signup_social img {
+.signIn_social img {
   width: 20px;
   height: 20px;
+}
+
+.signIn_personnal {
+  display: flex;
+  flex-direction: column;
+}
+
+.button_google,
+.button_facebook {
+  padding: 10px;
 }
