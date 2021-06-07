@@ -16,7 +16,6 @@ export default function AuthForm() {
   return (
     /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
     <form onSubmit={handleSubmit(onSubmit)}>
-      <h1>Connectez-vous</h1>
       <div className="signIn_social">
         <div className="signup_google">
           <button className="button_google">
@@ -33,10 +32,11 @@ export default function AuthForm() {
               src="https://miro.com/static/images/signup/v2/f-icon.svg?cbh=8730bf0aa763e55adbdfb6fa54a86b28"
               alt="Facebook"
             />
-            <p>Se connecter avec facebook</p>
+            <p>Se connecter avec Facebook</p>
           </button>
         </div>
       </div>
+      <h3>ou connectez-vous avec votre adresse mail personnel</h3>
       <div className="signIn_personnal">
         {/* register your input into the hook by invoking the "register" function */}
         <input
